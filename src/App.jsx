@@ -2,6 +2,9 @@ import React from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { ColorModeContext, useMode } from './theme';
 import Topbar from './components/Topbar';
+import Sidenav from './components/Sidenav';
+import { ProSidebarProvider } from 'react-pro-sidebar';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -12,7 +15,11 @@ function App() {
         <CssBaseline />
         <div className='app'>
           <main className='content'>
-            <Topbar />
+            <ProSidebarProvider>
+              <Topbar />
+              <Sidenav />
+              <Outlet />
+            </ProSidebarProvider>
           </main>
         </div>
       </ThemeProvider>
