@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Admin Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Focused on Understanding SideNavigation, Material UI.\
 
 ## Available Scripts
 
