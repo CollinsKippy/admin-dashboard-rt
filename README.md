@@ -1,4 +1,4 @@
-# Admin Dashboard
+# Admin Dashboard with React
 
 Focused on Understanding SideNavigation, Material UI.\
 
