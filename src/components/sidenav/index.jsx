@@ -31,27 +31,25 @@ const Sidenav = ({ children }) => {
       <Menu
         menuItemStyles={{
           button: ({ level, active, disabled }) => {
-            return {
-              // color: disabled ? colors.primary[100] : colors.redAccent[100],
-              '&:hover': {
-                backgroundColor: colors.primary[700],
-              },
-              backgroundColor: active
-                ? colors.primary[700]
-                : colors.primary[500],
-            };
-
-            // if (level === 1) {
-            //   return {
-            //     // color: disabled ? colors.primary[100] : colors.redAccent[100],
-            //     '&:hover': {
-            //       backgroundColor: colors.primary[700],
-            //     },
-            //     backgroundColor: active
-            //       ? colors.secondary[200]
-            //       : colors.secondary[400],
-            //   };
-            // }
+            if (level === 0) {
+              return {
+                // color: disabled ? colors.primary[100] : colors.redAccent[100],
+                '&:hover': {
+                  backgroundColor: colors.primary[700],
+                },
+                backgroundColor: active
+                  ? colors.primary[700]
+                  : colors.primary[500],
+              };
+            } else {
+              return {
+                // color: disabled ? colors.primary[100] : colors.redAccent[100],
+                '&:hover': {
+                  backgroundColor: colors.gray[900],
+                },
+                backgroundColor: active ? colors.gray[900] : colors.gray[800],
+              };
+            }
           },
         }}
       >
