@@ -1,6 +1,7 @@
 # Admin Dashboard with React
 
-Focused on Understanding SideNavigation, Material UI.\
+Focused on Understanding Dashboard Design in React with Material UI.\
+Added React-Proto-Sidebar.\
 
 ## Available Scripts
 
