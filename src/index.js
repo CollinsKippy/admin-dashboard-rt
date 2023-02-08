@@ -13,6 +13,7 @@ import BarPage from './pages/bar/index';
 import LinePage from './pages/line/index';
 import PiePage from './pages/pie/index';
 import FaqPage from './pages/faq/index';
+import CalendarPage from './pages/calendar/index';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { path: 'line', element: <LinePage /> },
       { path: 'pie', element: <PiePage /> },
       { path: 'faq', element: <FaqPage /> },
+      { path: 'calendar', element: <CalendarPage /> },
     ],
   },
 ]);
