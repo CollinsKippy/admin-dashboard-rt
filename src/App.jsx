@@ -1,8 +1,8 @@
 import React from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { ColorModeContext, useMode } from './theme';
-import Topbar from './components/Topbar';
-import Sidenav from './components/Sidenav';
+import Sidenav from './components/sidenav/index';
+import Toolbar from './components/toolbar/index';
 import { ProSidebarProvider } from 'react-pro-sidebar';
 import { Outlet } from 'react-router-dom';
 
@@ -13,15 +13,16 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div className='app'>
-          <main className='content'>
-            <ProSidebarProvider>
-              <Topbar />
-              <Sidenav />
+        <ProSidebarProvider>
+          <div className='app'>
+            <Sidenav />
+
+            <main className='content'>
+              <Toolbar />
               <Outlet />
-            </ProSidebarProvider>
-          </main>
-        </div>
+            </main>
+          </div>
+        </ProSidebarProvider>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

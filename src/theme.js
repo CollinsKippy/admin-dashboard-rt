@@ -199,6 +199,7 @@ export const ColorModeContext = createContext({
 export const useMode = () => {
   const [mode, setMode] = useState('dark');
 
+  // 1. memoize the object with toggleColorMode function
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () =>
@@ -207,6 +208,7 @@ export const useMode = () => {
     []
   );
 
+  // 2. memoize the createTheme function, track mode changes
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
 
   return [theme, colorMode];
