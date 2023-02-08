@@ -1,6 +1,6 @@
 import { Box, IconButton, InputBase, useTheme } from '@mui/material';
 import React, { useContext } from 'react';
-import { ColorModeContext, getPaletteTokensByMode } from '../../theme';
+import { ColorModeContext, getPaletteByMode } from '../../theme';
 import SearchIcon from '@mui/icons-material/Search';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
@@ -10,7 +10,7 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 
 const Toolbar = () => {
   const theme = useTheme();
-  const colors = getPaletteTokensByMode(theme.palette.mode);
+  const colors = getPaletteByMode(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
 
   return (

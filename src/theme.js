@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material';
 import { createContext, useState, useMemo } from 'react';
 
-export const getPaletteTokensByMode = (mode) => ({
+export const getPaletteByMode = (mode) => ({
   ...(mode === 'dark'
     ? {
         gray: {
@@ -120,7 +120,7 @@ export const getPaletteTokensByMode = (mode) => ({
 });
 
 export const themeSettings = (mode) => {
-  const colors = getPaletteTokensByMode(mode); // mode is 'dark' or 'light'
+  const colors = getPaletteByMode(mode); // mode is 'dark' or 'light'
 
   return {
     palette: {

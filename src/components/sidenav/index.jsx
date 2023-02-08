@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
-import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import {
+  Sidebar,
+  Menu,
+  MenuItem,
+  SubMenu,
+  useProSidebar,
+} from 'react-pro-sidebar';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
@@ -13,46 +19,43 @@ import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
 import { useTheme } from '@mui/material';
-import { getPaletteTokensByMode } from '../../theme';
+import { getPaletteByMode } from '../../theme';
+import SidenavHeader from './sidenav.header';
 
 const Sidenav = ({ children }) => {
   const theme = useTheme();
-  const colors = getPaletteTokensByMode(theme.palette.mode);
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
-  const [menuSelected, setMenuSelected] = useState('Dashboard');
+  const colors = getPaletteByMode(theme.palette.mode);
+  const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } =
+    useProSidebar();
 
   return (
-    <Sidebar
-      backgroundColor={colors.primary[500]}
-      rootStyles={{
-        backgroundColor: colors.primary[500],
-      }}
-    >
+    <Sidebar backgroundColor={colors.primary[600]} rootStyles={{}}>
       <Menu
         menuItemStyles={{
           button: ({ level, active, disabled }) => {
             if (level === 0) {
               return {
-                // color: disabled ? colors.primary[100] : colors.redAccent[100],
-                '&:hover': {
-                  backgroundColor: colors.primary[700],
-                },
                 backgroundColor: active
                   ? colors.primary[700]
-                  : colors.primary[500],
+                  : colors.primary[600],
+                '&:hover': {
+                  backgroundColor: colors.primary[400],
+                },
               };
             } else {
               return {
-                // color: disabled ? colors.primary[100] : colors.redAccent[100],
+                backgroundColor: active
+                  ? colors.primary[700]
+                  : colors.primary[500],
                 '&:hover': {
-                  backgroundColor: colors.gray[900],
+                  backgroundColor: colors.primary[400],
                 },
-                backgroundColor: active ? colors.gray[900] : colors.gray[800],
               };
             }
           },
         }}
       >
+        <SidenavHeader toggleSidebar={toggleSidebar} />
         <MenuItem> Dashboard </MenuItem>
         <MenuItem> Team </MenuItem>
         <SubMenu label='Charts'>
