@@ -31,16 +31,17 @@ const SidenavHeader = ({ collapsed, collapseSidebar }) => {
       {!collapsed && (
         <Box
           mb={1}
+          p={2}
           display='flex'
           flexDirection={`column`}
           justifyContent='center'
         >
           <Box px={2} pb={1}>
             <img
-              src='https://randomuser.me/api/portraits/med/men/91.jpg'
-              width={100}
-              height={100}
-              style={{ cursor: 'pointer', borderRadius: 50 }}
+              src='https://randomuser.me/api/portraits/men/91.jpg'
+              width={80}
+              height={80}
+              style={{ cursor: 'pointer', borderRadius: 40 }}
               alt='Person Profile'
             />
           </Box>
