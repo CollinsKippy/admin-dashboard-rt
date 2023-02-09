@@ -8,7 +8,7 @@ const TeamPage = () => {
 
   return (
     <Box>
-      <Typography variant='h2' sx={{ m: 2 }} color={colors.gray[200]}>
+      <Typography variant='h2' sx={{ m: 3 }} color={colors.gray[200]}>
         Team
       </Typography>
       <Divider />
