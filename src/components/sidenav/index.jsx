@@ -62,10 +62,12 @@ const Sidenav = ({ children }) => {
         <MenuItem> Dashboard </MenuItem>
         <MenuItem> Team </MenuItem>
         <SubMenu label='Charts'>
-          <MenuItem> Pie charts </MenuItem>
-          <MenuItem> Line charts </MenuItem>
+          <MenuItem> Pie chart </MenuItem>
+          <MenuItem> Line chart </MenuItem>
+          <MenuItem> Bar chart </MenuItem>
         </SubMenu>
         <MenuItem> Invoices </MenuItem>
+        <MenuItem> Calendar </MenuItem>
         <MenuItem> Form </MenuItem>
       </Menu>
     </Sidebar>
