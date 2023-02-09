@@ -29,12 +29,18 @@ const SidenavHeader = ({ collapsed, collapseSidebar }) => {
 
       {/* PROFILE IMAGE AND NAME */}
       {!collapsed && (
-        <Box mb={1}>
+        <Box
+          mb={1}
+          display='flex'
+          flexDirection={`column`}
+          justifyContent='center'
+        >
           <Box px={2} pb={1}>
             <img
-              src='https://user-images.githubusercontent.com/25878302/144499035-2911184c-76d3-4611-86e7-bc4e8ff84ff5.jpg'
+              src='https://randomuser.me/api/portraits/med/men/91.jpg'
               width={100}
               height={100}
+              style={{ cursor: 'pointer', borderRadius: 50 }}
               alt='Person Profile'
             />
           </Box>
