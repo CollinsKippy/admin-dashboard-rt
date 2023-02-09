@@ -55,7 +55,10 @@ const Sidenav = ({ children }) => {
           },
         }}
       >
-        <SidenavHeader toggleSidebar={toggleSidebar} />
+        <SidenavHeader
+          collapseSidebar={() => collapseSidebar()}
+          collapsed={collapsed}
+        />
         <MenuItem> Dashboard </MenuItem>
         <MenuItem> Team </MenuItem>
         <SubMenu label='Charts'>
