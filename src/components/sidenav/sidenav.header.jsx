@@ -45,7 +45,7 @@ const SidenavHeader = ({ collapsed, collapseSidebar }) => {
               fontWeight={'500'}
               color={colors.gray[200]}
             >
-              Morris Kirui
+              Morris Kirry
             </Typography>
             <Typography variant='h6' color={colors.gray[400]}>
               Team Leader
