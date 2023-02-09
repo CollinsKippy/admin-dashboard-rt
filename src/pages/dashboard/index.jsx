@@ -9,7 +9,7 @@ const DashboardPage = () => {
   return (
     <Box>
       <Typography variant='h2' sx={{ m: 2 }} color={colors.gray[200]}>
-        Dashboard Page
+        Dashboard
       </Typography>
       <Divider />
     </Box>

@@ -18,15 +18,15 @@ import PieChartOutlineOutlinedIcon from '@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
-import { useTheme } from '@mui/material';
+import { Typography, useTheme } from '@mui/material';
 import { getPaletteByMode } from '../../theme';
 import SidenavHeader from './sidenav.header';
+import { Link } from 'react-router-dom';
 
 const Sidenav = ({ children }) => {
   const theme = useTheme();
   const colors = getPaletteByMode(theme.palette.mode);
-  const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } =
-    useProSidebar();
+  const { collapseSidebar, collapsed } = useProSidebar();
 
   return (
     <Sidebar backgroundColor={colors.primary[600]} rootStyles={{}}>
@@ -55,12 +55,19 @@ const Sidenav = ({ children }) => {
           },
         }}
       >
+        {/* SIDENAV */}
         <SidenavHeader
           collapseSidebar={() => collapseSidebar()}
           collapsed={collapsed}
         />
-        <MenuItem> Dashboard </MenuItem>
-        <MenuItem> Team </MenuItem>
+
+        {/* MENU ITEMS */}
+        <MenuItem icon={<HomeOutlinedIcon/>} component={<Link to='/' />}>
+          <Typography>Dashboard</Typography>
+        </MenuItem>
+        <MenuItem icon={<PeopleOutlinedIcon/>} component={<Link to='/team' />}>
+          <Typography>Team</Typography>
+        </MenuItem>
         <SubMenu label='Charts'>
           <MenuItem> Pie chart </MenuItem>
           <MenuItem> Line chart </MenuItem>

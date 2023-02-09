@@ -17,8 +17,8 @@ const SidenavHeader = ({ collapsed, collapseSidebar }) => {
         p={2}
       >
         {!collapsed && (
-          <Typography variant='h3' color={colors.gray[100]}>
-            READMINI
+          <Typography variant='h5' color={colors.gray[200]} fontWeight="700">
+            RADMYN
           </Typography>
         )}
 
@@ -48,13 +48,13 @@ const SidenavHeader = ({ collapsed, collapseSidebar }) => {
 
           <Box px={2} pb={2}>
             <Typography
-              variant='h5'
+              variant='h6'
               fontWeight={'500'}
-              color={colors.gray[200]}
+              color={colors.greenAccent[300]}
             >
               Morris Kirry
             </Typography>
-            <Typography variant='h6' color={colors.gray[400]}>
+            <Typography variant='h6' color={colors.greenAccent[600]}>
               Team Leader
             </Typography>
           </Box>
